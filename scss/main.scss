@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+$dark-cyan: rgb(0, 209, 132);
+$cream: rgb(167, 149, 129);
+$very-dark-blue: rgb(16, 31, 19);
+$dark-grey-blue: rgb(108, 114, 137);
+$white: rgb(255, 255, 255);
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.4rem;
+	background-color: $cream;
+}
+.card {
+	background-color: $white;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 335px;
+	border-radius: 1.5rem;
+	overflow: hidden;
+
+	&__img {
+		&-mobile {
+			border-radius: 15px 15px 0px 0px;
+			width: 100%;
+			height: 100%;
+		}
+		&-desktop {
+			display: none;
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		padding: 1.8rem;
+		&-product {
+			margin-top: 1.6rem;
+			text-transform: uppercase;
+			letter-spacing: 7px;
+			&-title {
+				margin-top: 1rem;
+				line-height: 90%;
+				letter-spacing: 2px;
+				font-family: "Fraunces", serif;
+			}
+		}
+		&-describe {
+			margin-top: 1.6rem;
+			line-height: 1.5;
+			color: hsl(212, 21%, 14%);
+		}
+		&-prizes {
+			display: flex;
+			margin-top: 1.5rem;
+			&-new {
+				font-weight: bold;
+				font-size: 3rem;
+				color: rgb(25, 99, 31);
+			}
+			&-old {
+				line-height: 4rem;
+				margin-left: 1rem;
+				text-decoration-line: line-through;
+			}
+		}
+		&-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1.2rem 2.4rem;
+			background-color: rgb(25, 99, 31);
+			color: white;
+			border: none;
+			border-radius: 1rem;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			&-icon {
+				margin-right: 1rem;
+			}
+		}
+		&-btn:hover {
+			background-color: rgb(12, 49, 15);
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.card {
+		flex-direction: row;
+		width: 700px;
+
+		&__img {
+			width: 50%;
+			&-mobile {
+				display: none;
+			}
+			&-desktop {
+				display: flex;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			width: 50%;
+			height: 52.5rem;
+			padding: 3rem;
+			&-product {
+				&-title {
+					font-weight: bold;
+					font-size: 3.6rem;
+				}
+			}
+			&-describe {
+				font-size: 1.7rem;
+			}
+			&-prizes {
+				&-new {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+}

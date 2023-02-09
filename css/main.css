@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  background-color: rgb(167, 149, 129);
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 335px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.card__img-mobile {
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+.card__img-desktop {
+  display: none;
+}
+.card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.8rem;
+}
+.card__info-product {
+  margin-top: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+.card__info-product-title {
+  margin-top: 1rem;
+  line-height: 90%;
+  letter-spacing: 2px;
+  font-family: "Fraunces", serif;
+}
+.card__info-describe {
+  margin-top: 1.6rem;
+  line-height: 1.5;
+  color: hsl(212deg, 21%, 14%);
+}
+.card__info-prizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+}
+.card__info-prizes-new {
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(25, 99, 31);
+}
+.card__info-prizes-old {
+  line-height: 4rem;
+  margin-left: 1rem;
+  text-decoration-line: line-through;
+}
+.card__info-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2rem 2.4rem;
+  background-color: rgb(25, 99, 31);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.card__info-btn-icon {
+  margin-right: 1rem;
+}
+.card__info-btn:hover {
+  background-color: rgb(12, 49, 15);
+}
+
+@media (min-width: 700px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 700px;
+  }
+  .card__img {
+    width: 50%;
+  }
+  .card__img-mobile {
+    display: none;
+  }
+  .card__img-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .card__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 50%;
+    height: 52.5rem;
+    padding: 3rem;
+  }
+  .card__info-product-title {
+    font-weight: bold;
+    font-size: 3.6rem;
+  }
+  .card__info-describe {
+    font-size: 1.7rem;
+  }
+  .card__info-prizes-new {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
