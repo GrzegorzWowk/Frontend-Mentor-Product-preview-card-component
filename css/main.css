@@ -130,6 +130,11 @@ body {
   background-color: rgb(12, 49, 15);
 }
 
+.attribution {
+  font-size: 2rem;
+  text-align: center;
+}
+
 @media (min-width: 700px) {
   .card {
     -webkit-box-orient: horizontal;
@@ -166,6 +171,9 @@ body {
     height: 52.5rem;
     padding: 3rem;
   }
+  .card__info-product {
+    margin-top: 0;
+  }
   .card__info-product-title {
     font-weight: bold;
     font-size: 3.6rem;
@@ -175,5 +183,8 @@ body {
   }
   .card__info-prizes-new {
     font-size: 4rem;
+  }
+  .card__info-btn {
+    margin-bottom: -1.9rem;
   }
 }/*# sourceMappingURL=main.css.map */
